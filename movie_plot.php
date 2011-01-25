@@ -14,6 +14,7 @@ class MoviePlotGenerator {
 									   'archaeologist',
 									   'investment banker',
 									   'baker',
+									   'PHP Developer',
 									   'swimsuit model');
 						 
 	public static $quirks = array('penchant for melodrama',
@@ -26,6 +27,7 @@ class MoviePlotGenerator {
 								  '57\' Chevy',
 								  'family back in Mexico');
 					
+	public $inUse = array();
 	/**
 	 *
 	 * Get the plot of the next blockbuster action flick.
@@ -57,7 +59,11 @@ class MoviePlotGenerator {
 	 */	
 	protected function getRandom($arr)
 	{
-		return $arr[rand(0, count($arr) - 1)];
+		do {
+			$rand = $arr[mt_rand(0, count($arr) - 1)];
+		} while (in_array($rand, $this->inUse));
+		$this->inUse[] = $rand;
+		return $rand;
 	}
 		
 }
