@@ -4,6 +4,7 @@ class MoviePlotGenerator {
 									  'diminuitive',
 									  'fat',
 									  'determined',
+									  'tired',
 									  'girsly');
 						
 	public static $occupations = array('movie-critic',
@@ -14,6 +15,7 @@ class MoviePlotGenerator {
 									   'archaeologist',
 									   'investment banker',
 									   'baker',
+									   'PHP Developer',
 									   'swimsuit model');
 						 
 	public static $quirks = array('penchant for melodrama',
