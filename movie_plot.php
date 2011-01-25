@@ -14,6 +14,7 @@ class MoviePlotGenerator {
 									   'archaeologist',
 									   'investment banker',
 									   'baker',
+									   'PHP Developer',
 									   'swimsuit model');
 						 
 	public static $quirks = array('penchant for melodrama',
@@ -57,7 +58,7 @@ class MoviePlotGenerator {
 	 */	
 	protected function getRandom($arr)
 	{
-		return $arr[rand(0, count($arr) - 1)];
+		return $arr[mt_rand(0, count($arr) - 1)];
 	}
 		
 }
